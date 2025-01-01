@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, serverTimestamp, addDoc } from "firebase/firestore";
+import { getFirestore, collection, serverTimestamp, addDoc, getDocs, doc } from "firebase/firestore";
 
 class Firebase {
     firebase = null;
@@ -29,6 +29,38 @@ class Firebase {
             console.log('Data written to Firebase with ID: ', docRef.id);
         } catch (error) {
             console.error('Error writing to Firebase', error);
+        }
+    }
+
+    readFromFirebase = async (collectionName) => {
+        try {
+            const collectionRef = collection(this.firestore, collectionName);
+            const snapshot = await getDocs(collectionRef);
+            const docs = snapshot.docs;
+            // for (const doc of snapshot.docs) {
+            //     let docData = doc.data();
+            //     if (subCollectionName) {
+            //         const subCollectionData = await this.readFromDoc(doc.ref, subCollectionName);
+            //         docData[subCollectionName] = subCollectionData;
+            //     }
+            //     data.push({ id: doc.id, ...docData });
+            // }
+            return docs;
+        } catch (error) {
+            console.error('Error reading from Firebase', error);
+            throw error;
+        }
+    }
+
+    readFromDoc = async (docRef, subCollectionName) => {
+        try {
+            const subCollectionRef = collection(docRef, subCollectionName);
+            const subCollectionSnapshot = await getDocs(subCollectionRef);
+            const docs = subCollectionSnapshot.docs;
+            return docs;
+        } catch (error) {
+            console.error('Error reading sub collection from Firebase', error);
+            throw error;
         }
     }
 }

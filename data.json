@@ -1,0 +1,89 @@
+[
+    {
+        "id": "HB0GYxOcSNkAbgRsaeB6",
+        "cycle": 0,
+        "hasChild": false,
+        "type": 5,
+        "name": "Mua sắm",
+        "note": "",
+        "children": []
+    },
+    {
+        "id": "blay90TGbSck6G4oLqgx",
+        "name": "Giải trí",
+        "cycle": 0,
+        "hasChild": false,
+        "type": 1,
+        "note": "",
+        "children": []
+    },
+    {
+        "id": "deglRp3iJJ0PPYJoHqUx",
+        "hasChild": false,
+        "cycle": 0,
+        "name": "Ăn uống",
+        "type": 2,
+        "note": "",
+        "children": []
+    },
+    {
+        "id": "kmJLurBRwAA8IxMqmyzE",
+        "note": "",
+        "name": "Học tập",
+        "type": 3,
+        "hasChild": true,
+        "children": [
+            {
+                "id": "4tGsjE33eVTrpwY9qD4A",
+                "hasChild": false,
+                "cycle": 0,
+                "note": "",
+                "name": "Học phí"
+            },
+            {
+                "id": "EYh5D70OprErDUFAP9sy",
+                "cycle": 1,
+                "note": "",
+                "hasChild": false,
+                "name": "Học thêm"
+            },
+            {
+                "id": "ba1NMK7jxQLiEwHgPDCP",
+                "hasChild": false,
+                "note": "",
+                "name": "Dụng cụ học tập",
+                "cycle": 0
+            }
+        ]
+    },
+    {
+        "id": "wg00oAFueHiUE0unQfk3",
+        "name": "Nơi ở",
+        "note": "",
+        "hasChild": true,
+        "type": 4,
+        "children": [
+            {
+                "id": "EyzygQz3PhZndAsFKJbk",
+                "cycle": 1,
+                "hasChild": false,
+                "name": "Tiền nhà",
+                "note": ""
+            },
+            {
+                "id": "kVfkPPQtknlsUrBYRG3h",
+                "note": "",
+                "name": "Tiền nước",
+                "cycle": 1,
+                "hasChild": false
+            },
+            {
+                "id": "oeHpvzocZVPjnqEqeXp7",
+                "hasChild": false,
+                "cycle": 1,
+                "note": "",
+                "name": "Tiền điện"
+            }
+        ]
+    }
+]
